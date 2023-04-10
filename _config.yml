@@ -24,9 +24,9 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ricky Pang"
 description              : "Ideas worth sharing"
-url                      : "https://rickypang0219.github.io"
+# url                      : "https://rickypang0219.github.io"
 # baseurl                  : "rickypang0219.github.io"
-repository               :  "rickypang0219/rickypang0219.github.io"
+# repository               :  "rickypang0219/rickypang0219.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/logo_2.jpeg"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
