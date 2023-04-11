@@ -116,7 +116,7 @@ author:
     # - label: "Email"
     #   icon: "fas fa-fw fa-envelope-square"
     #   url: "kcpangac@connect.ust.hk"
-    - label: "Linkedin"
+    - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url:  "https://www.linkedin.com/in/ka-chun-pang-674269229"
     # - label: "Twitter"
@@ -135,7 +135,7 @@ footer:
     # - label: "Email"
     #   icon: "fas fa-fw fa-envelope-square"
     #   url: "kcpangac@connect.ust.hk"
-    - label: "Linkedin"
+    - label: "LinkedIn"
       icon: "fab fa-linkedin"
       url:  "https://www.linkedin.com/in/ka-chun-pang-674269229"
     - label: 'GitHub'
