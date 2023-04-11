@@ -3,15 +3,16 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: single
+classes: wide
 # permalink: /about_me/
 author_profile: true
 title : About Me
 ---
 
-I am a physics M.Phil graduate of HKUST 
+Hi! I am an aspiring M.Phil graduate at the Hong Kong University of Science and Technology (HKUST). In the past three years, I researched condensed matter theory and statistical inference in astrophysics under Prof. [Adrian Po](https://physics.ust.hk/eng/people_detail.php?pplcat=1&id=613) and Prof. [George Smoot](https://ias.hkust.edu.hk/people/ias-members/faculty/prof-george-smoot), respectively.
 
-
-, doing research in theoretical condensed matter. I am interested in entanglement renormalization in Free fermion problem, tensor network representation of a quantum many body states, and topological phases of matters. Check out my CV if you want to know more about me!
+During my undergraduate studies, I was elected to be the  [CERN](https://home.cern) (European Organization for Nuclear Research) summer research student in the data science and particle physics track. Besides, I worked with Prof. [Yi Wang](https://physics.ust.hk/eng/people_detail.php?pplcat=1&id=223) on the relation between the primordial universe and gravitational wave production as my final year project. Apart from research activities, I emphasized sharing scientific ideas, which drove me to become a STEM tutor. As a STEM tutor, I shared and hosted several exhibitions and workshops for the general public and minorities in Hong Kong.
+My belief is “Ideas worth sharing”,  which coincides with the aim of TED talk. This website is a starting point to share knowledge, including mathematics, quant. Finance, and physics. I hope someone will find the content here helpful and spread the knowledge to the world!
 
 
 
@@ -19,4 +20,9 @@ I am a physics M.Phil graduate of HKUST
 ## Zipper Entanglement Renormalization for Free Fermions
 Sing Lam Wong, *Ka Chun Pang* , Hoi Chun Po\
 [Paper](https://arxiv.org/abs/2206.11761){: .btn .btn--info}
+
+
+## Site 
+
+This site is constructed with the use of [Jekyll](https://jekyllrb.com), [KaTex](https://katex.org), and [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/), and most importantly the support of [GitHub Pages](https://pages.github.com). 
 
