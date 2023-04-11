@@ -20,11 +20,14 @@ My belief is “Ideas worth sharing”,  which coincides with the aim of TED tal
 # Research
 ## Zipper Entanglement Renormalization for Free Fermions
 Sing Lam Wong, **Ka Chun Pang** , Hoi Chun Po\
-[Paper](https://arxiv.org/abs/2206.11761){: .btn .btn--info}
+[Paper](https://arxiv.org/abs/2206.11761){: .btn .btn--info} 
+[Slides](/assets/Handout/Defense_PPT.pdf){: .btn .btn--info}
 
 
+
+<!-- 
 # Handout
-* [Zipper Entanglement Renormalization PPT](/assets/Handout/Defense_PPT.pdf)
+* [Zipper Entanglement Renormalization PPT](/assets/Handout/Defense_PPT.pdf) -->
 
 ## Site 
 

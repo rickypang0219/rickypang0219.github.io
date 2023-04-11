@@ -42,25 +42,27 @@ $$ | \Psi \rangle = \prod_{k, E_k \leq E_F} \hat{c_k}^{\dagger} | 0 \rangle $$
 # Free Fermion Correlation Matrix 
 One important feature of free fermion states is the correlation function. The systems/ states are fully determined by the corresponding correlation matrix by [Wick's theorem](https://en.wikipedia.org/wiki/Wick%27s_theorem). The correlation matrix $C_{ij}$ is the ground state expectation values of the creation and annihilation operators 
 
-$$ C_{ij} = \langle \Psi | \hat{c}_i^{~~\dagger} \hat{c}_j | \Psi \rangle .$$
+$$ C_{ij} = \langle \Psi | \hat{c}_i^{\dagger} \hat{c}_j | \Psi \rangle .$$
 
 The correlation matrix is computatble using single-paritcle information. For paritcle number preserving free fermion Hamiltonian, we can diagonalize the single-particle hamiltonain $$h_{ij} = U_{ik}E_k U_{kj}^\dagger$$, where $$U_{ik}$$ and $$E_k$$ are the eigenvectors and energies. We can rotate the creation/ annihilation operator to $$ \hat{d}^{~~\dagger}_{k} = \sum_{i} U_{ik} \hat{c}^{~~\dagger}_i$$ and define the ground state as 
 
-$$ | \Psi \rangle = \prod_{k, E_k \leq E_F} \hat d^{~~\dagger}_k  | 0 \rangle , $$
+$$ | \Psi \rangle = \prod_{k, E_k \leq E_F} \hat d^{\dagger}_k  | 0 \rangle , $$
 
 where $$N_F$$ is the number of $$k$$ below the Fermi Level. Therefore, we can compute the correlation matrix in the rotated operators basis
 
 $$
 \begin{align*}
-    C_{ij} = \langle \Psi | \hat c^{~~\dagger}_{i} \hat c_{j} | \Psi \rangle 
-    &= \langle \Psi | U^{\dagger}_{li} \hat d^{~~\dagger}_{l} U_{jm} \hat d_{m} | \Psi \rangle \\ 
-    &=  U^{\dagger}_{li} U_{jm}  \langle \Psi | \hat d^{~~\dagger}_{l} \hat d_{m} | \Psi \rangle \\ 
+    C_{ij} = \langle \Psi | \hat c^{\dagger}_{i} \hat c_{j} | \Psi \rangle 
+    &= \langle \Psi | U^{\dagger}_{li} \hat d^{\dagger}_{l} U_{jm} \hat d_{m} | \Psi \rangle \\ 
+    &=  U^{\dagger}_{li} U_{jm}  \langle \Psi | \hat d^{\dagger}_{l} \hat d_{m} | \Psi \rangle \\ 
     &=  U^{\dagger}_{li} U_{jm}   \delta_{lm} \\
     &= \sum_{l}^{N_F} U_{jl}U^{\dagger}_{li} ~.  
 \end{align*}
 $$
 
 # Entanglement Hamiltonian and Entanglement Entropy 
+The correlation matrix and the entanglement entropy is somehow related. Intuitively, the entnaglement is stronger when things are more correlated. In free fermion context, this relation is proven by [Chung and Peschel](https://arxiv.org/abs/cond-mat/0103301). The idea is to relate the density matrix with the correlation matrix. Recall that in quantum mechanics, we can expresse the physical observables using density matrix 
 
+$$ \langle \hat{O} \rangle = \text{Tr} ( \hat{O} \hat{\rho} ) $$
 
 
