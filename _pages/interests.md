@@ -7,7 +7,7 @@ permalink: /interests/
 ---
 
 ## Entanglement Renormalization
-Entanglement Renormalization One of my research interests is entanglement renormalization. Entanglement renormalization offers us a way to use less degrees of freedom to describe quantum states effectively by erasing short-range entanglement. The daily life analogy of entanglement renormalization is image compression. With image compression, we can store images with less storage by erasing the fine detail of the original images. This kind of effectiveness is as same as the entanglement renormalization. 
+ Entanglement renormalization offers us a way to use less degrees of freedom to describe quantum states effectively by erasing short-range entanglement. The daily life analogy of entanglement renormalization is image compression. With image compression, we can store images with less storage by erasing the fine detail of the original images. This kind of effectiveness is as same as the entanglement renormalization. 
 
 With the entanglement renormalization, we believe that the important information or the defining features of the quantum states are stored within a few degrees of freedom, and others are redundant. 
 
