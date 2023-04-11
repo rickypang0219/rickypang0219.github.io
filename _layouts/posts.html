@@ -15,13 +15,15 @@ layout: archive
 <!-- LaTex -->
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-<aside class="sidebar__right">
+
+<!--  Toc for post  -->
+<!-- <aside class="sidebar__right">
   <nav class="toc" markdown="1">
   <header><h4 class="nav__title"><i class="fas fa-{{ include.icon | default: 'file-alt' }}"></i> {{ include.title | default: site.data.ui-text[site.locale].toc_label }}</h4></header>
   *  Auto generated table of contents
   {:toc .toc__menu}
   </nav>
-</aside>
+</aside> -->
 
 <ul class="taxonomy__index">
   {% assign postsInYear = site.posts | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}

@@ -23,6 +23,10 @@ Sing Lam Wong, **Ka Chun Pang** , Hoi Chun Po\
 [Paper](https://arxiv.org/abs/2206.11761){: .btn .btn--info}
 
 
+# Handout
+
+* [Zipper Entanglement Renormalization PPT](/assets/Handout/Defense_PPT.pdf)
+
 ## Site 
 
 This site is constructed with the use of [Jekyll](https://jekyllrb.com), [KaTex](https://katex.org), and [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/), and most importantly the support of [GitHub Pages](https://pages.github.com). 
