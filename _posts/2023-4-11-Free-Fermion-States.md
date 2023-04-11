@@ -76,7 +76,7 @@ $$ (C_R)_{ij} = \text{Tr} ( \hat c^\dagger_i  \hat c_j \hat{\rho}_R ) ~~,~~ i,j 
 
 For the reduced density matrix, it should be a free fermion operator in order to satisfy the Wick's theorem. We can write the reduced density matrix as the form of quadratic fermionic bilinear 
 
-$$ \hat \rho_R = \frac{1}{Z} e^{-\hat H_{R}} ~~, H_{ent} = \sum_{ij} h_{R,ij} \hat c^{\dagger}_i \hat c_j , $$
+$$ \hat \rho_R = \frac{1}{Z} e^{-\hat H_{R}} ~~, \hat H_{R} = \sum_{ij} h_{R,ij} \hat c^{\dagger}_i \hat c_j , $$
 
 where $$Z = \text{Tr} (e^{\hat H_{R}} ) $$ is the normalization constant and $$H_{R}$$ is the **Entnaglement Hamiltonian**. As the single-particle entanglement Hamiltonian $$h_{R,ij}$$ is a hermitian matrix, it has the following diagonalization $$h_{R} = U E U^\dagger $$ and we can rotate the fermionic operator as before $$d^{\dagger} = U c^\dagger$$. Therefore in the eigenbasis, we can simplify the reduced density matrix
 
