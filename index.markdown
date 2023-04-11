@@ -11,14 +11,15 @@ title : About Me
 
 Hi! I am an aspiring M.Phil graduate at the Hong Kong University of Science and Technology (HKUST). In the past three years, I researched condensed matter theory and statistical inference in astrophysics under Prof. [Adrian Po](https://physics.ust.hk/eng/people_detail.php?pplcat=1&id=613) and Prof. [George Smoot](https://ias.hkust.edu.hk/people/ias-members/faculty/prof-george-smoot), respectively.
 
-During my undergraduate studies, I was elected to be the  [CERN](https://home.cern) (European Organization for Nuclear Research) summer research student in the data science and particle physics track. Besides, I worked with Prof. [Yi Wang](https://physics.ust.hk/eng/people_detail.php?pplcat=1&id=223) on the relation between the primordial universe and gravitational wave production as my final year project. Apart from research activities, I emphasized sharing scientific ideas, which drove me to become a STEM tutor. As a STEM tutor, I shared and hosted several exhibitions and workshops for the general public and minorities in Hong Kong.
+During my undergraduate studies, I was elected to be the  [CERN](https://home.cern) (European Organization for Nuclear Research) summer UG researcher in the data science and particle physics track. Besides, I worked with Prof. [Yi Wang](https://physics.ust.hk/eng/people_detail.php?pplcat=1&id=223) on the relation between the primordial universe and gravitational wave production as my final year project. Apart from research activities, I emphasized sharing scientific ideas, which drove me to become a STEM tutor. As a STEM tutor, I shared and hosted several exhibitions and workshops for the general public and minorities in Hong Kong.
+
 My belief is “Ideas worth sharing”,  which coincides with the aim of TED talk. This website is a starting point to share knowledge, including mathematics, quant. Finance, and physics. I hope someone will find the content here helpful and spread the knowledge to the world!
 
 
 
 # Research
 ## Zipper Entanglement Renormalization for Free Fermions
-Sing Lam Wong, *Ka Chun Pang* , Hoi Chun Po\
+Sing Lam Wong, **Ka Chun Pang** , Hoi Chun Po\
 [Paper](https://arxiv.org/abs/2206.11761){: .btn .btn--info}
 
 
