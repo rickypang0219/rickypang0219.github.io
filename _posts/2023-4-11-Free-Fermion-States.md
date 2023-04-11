@@ -100,7 +100,7 @@ $$
 \frac{1}{Z} \text{Tr}_{R} \Bigg(\sum_{\alpha, \beta}  \hat d^{\dagger}_{\alpha} \hat d_{\beta} \exp( -\sum_{k} E_{k} \hat d^{\dagger}_{k} \hat d_{k}   ) \Bigg) = \langle \hat d^\dagger_{\alpha} \hat d_{\beta} \rangle = \delta_{\alpha \beta}  \langle \hat d^\dagger_{\alpha} \hat d_{\alpha} \rangle = \delta_{\alpha \beta} \frac{e^{-E_{\alpha}}}{1+e^{-E_\alpha}} ~,
 $$
 
-is simply the expectation value of the number operator. From statistical physics, the expectation values of the number operator to the mode is simply $$\frac{e^{-E_{\alpha}}}{1+e^{-E_\alpha}}$$. The above equation connects single-particle sector of entanglement Hamiltonian $$h^{R}$$ and the restricted correlation matrix. In other words, we have the matrix form  
+is simply the expectation value of the number operator. From statistical physics, the expectation values of the number operator to the mode is $$\frac{e^{-E_{\alpha}}}{1+e^{-E_\alpha}}$$. The above equation connects single-particle sector of entanglement Hamiltonian $$h^{R}$$ and the restricted correlation matrix. In other words, we have the matrix form  
 \begin{equation}
 	h^{R^{T}} = \ln \Bigg( \frac{1- C_R}{C_R} \Bigg) ~.
 \end{equation}
