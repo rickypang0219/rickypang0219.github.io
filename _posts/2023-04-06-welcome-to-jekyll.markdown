@@ -1,13 +1,12 @@
 ---
-layout: posts
+layout: single 
+classes : wide 
 title:  "Welcome to Jekyll!"
 date:   2023-04-06 22:02:49 +0800
 author_profile: true
 categories: jekyll update
 read_time : true 
-toc : true
-toc_label: "My Table of Contents"
-toc_icon: "cog"
+share : true
 ---
 
 
