@@ -12,8 +12,13 @@ Entanglement Renormalization One of my research interests is entanglement renorm
 With the entanglement renormalization, we believe that the important information or the defining features of the quantum states are stored within a few degrees of freedom, and others are redundant. 
 
 <!-- Image compression Fig -->
-![](/assets/images/image_compression.pdf )
-*Fig (1).  Example of image compression. (Left) The original picture. (Right) The compressed picture with less storage consumption. With the use of image compression, the fine details of the original image are erased. As a result, the eyes, hair, and hat are blury in the compressed image. Although some parts are blury, the compressed image still recognizable as a woman. The defining features are still preserved. The entanglement renormalization is similar to image compression in this sense.*
+<p align="center" style="text-align: justify">
+    <img src="/assets/images/image_compression.pdf" />
+    Fig (1).  Example of image compression. (Left) The original picture. (Right) The compressed picture with less storage consumption. With the use of image compression, the fine details of the original image are erased. As a result, the eyes, hair, and hat are blury in the compressed image. Although some parts are blury, the compressed image still recognizable as a woman. The defining features are still preserved. The entanglement renormalization is similar to image compression in this sense.
+</p>
+
+<!-- ![](/assets/images/image_compression.pdf )
+*Fig (1).  Example of image compression. (Left) The original picture. (Right) The compressed picture with less storage consumption. With the use of image compression, the fine details of the original image are erased. As a result, the eyes, hair, and hat are blury in the compressed image. Although some parts are blury, the compressed image still recognizable as a woman. The defining features are still preserved. The entanglement renormalization is similar to image compression in this sense.* -->
 
 
 
