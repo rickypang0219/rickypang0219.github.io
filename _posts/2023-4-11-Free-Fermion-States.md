@@ -46,7 +46,7 @@ $$ C_{ij} = \langle \Psi | \hat{c}_i^{\dagger} \hat{c}_j | \Psi \rangle .$$
 
 The correlation matrix is computatble using single-paritcle information. For paritcle number preserving free fermion Hamiltonian, we can diagonalize the single-particle hamiltonain $$h_{ij} = U_{ik}E_k U_{kj}^\dagger$$, where $$U_{ik}$$ and $$E_k$$ are the eigenvectors and energies. We can rotate the creation/ annihilation operator to $$ \hat{d}^{~~\dagger}_{k} = \sum_{i} U_{ik} \hat{c}^{~~\dagger}_i$$ and define the ground state as 
 
-$$ | \Psi \rangle = \prod_{k, E_k \leq E_F} \hat d^{\dagger}_k  | 0 \rangle , $$
+$$ | \Psi \rangle = \prod_{k, E_k \leq E_F}^{N_F} \hat d^{\dagger}_k  | 0 \rangle , $$
 
 where $$N_F$$ is the number of $$k$$ below the Fermi Level. Therefore, we can compute the correlation matrix in the rotated operators basis
 
