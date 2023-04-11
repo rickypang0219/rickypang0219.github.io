@@ -8,7 +8,10 @@ author_profile: true
 title : About Me
 ---
 
-I am a year 2 physics graduate student of HKUST, doing research in theoretical condensed matter. I am interested in entanglement renormalization in Free fermion problem, tensor network representation of a quantum many body states, and topological phases of matters. Check out my CV if you want to know more about me!
+I am a physics M.Phil graduate of HKUST 
+
+
+, doing research in theoretical condensed matter. I am interested in entanglement renormalization in Free fermion problem, tensor network representation of a quantum many body states, and topological phases of matters. Check out my CV if you want to know more about me!
 
 
 
