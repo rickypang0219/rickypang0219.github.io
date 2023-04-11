@@ -7,19 +7,19 @@ permalink: /interests/
 ---
 
 ## Entanglement Renormalization
-One of my research interests is the entanglement renormalization. Entanglement renormalization offers us a way to use less degrees of freedom to describe quantum states effectively by erasing short-range entanglement. The daily life analogy of entnaglement renormalization is the image compression. With the use of image compression, we can store images with using less storage by erasing the fine detail of the orginal images. This kind of effectiveness is as same as the entanglement renormalization. 
+Entanglement Renormalization One of my research interests is entanglement renormalization. Entanglement renormalization offers us a way to use less degrees of freedom to describe quantum states effectively by erasing short-range entanglement. The daily life analogy of entanglement renormalization is image compression. With image compression, we can store images with less storage by erasing the fine detail of the original images. This kind of effectiveness is as same as the entanglement renormalization. 
 
-With the entanglement renormalization, we believe that the important information or the defining features of the quantum states are stored within small number of degrees of freedom and other are redundant. 
+With the entanglement renormalization, we believe that the important information or the defining features of the quantum states are stored within a few degrees of freedom, and others are redundant. 
 
 <!-- Image compression Fig -->
 ![](/assets/images/image_compression.pdf )
-*Fig (1).  Example of image compression. (Left) The original picture. (Right) The compressed picture with less storage consumption. With the use of image compression, the fine details of the original image are erased. As a result, the eyes, hair, and the hat are blur in the compressed image. Although soem parts are blur, the compressed image still recognizabe as a woman. The defining features are still preserved. The entanglement renormalization is similar with image compression in this sense.*
+*Fig (1).  Example of image compression. (Left) The original picture. (Right) The compressed picture with less storage consumption. With the use of image compression, the fine details of the original image are erased. As a result, the eyes, hair, and hat are blury in the compressed image. Although some parts are blury, the compressed image still recognizable as a woman. The defining features are still preserved. The entanglement renormalization is similar to image compression in this sense.*
 
 
 
 
 ## Tensor Network States 
-Tensor Network States (TNS) is a numerical tool to obtain an effective description for large-size tensors, which are the high-dimensional generalization of vectors and matrices. The TNS decompose a large-size tensor to product of multiple small-size tensors/matrices. In this sense, we use less degree of freedom to describe the original tensor which increases the computational efficientcy. Matrix Product States (MPS) and Multiscale Entanglement Renormalization Ansatz (MERA) are two famous example of TNS on one-dimension. 
+Tensor Network States (TNS) is a numerical tool to obtain an effective description for large-size tensors, which are the high-dimensional generalization of vectors and matrices. The TNS decomposes a large-size tensor to the product of multiple small-size tensors/matrices. In this sense, we use less degree of freedom to describe the original tensor, increasing the computational efficiency. Matrix Product States (MPS) and Multiscale Entanglement Renormalization Ansatz (MERA) are two famous examples of TNS on one dimension. 
 
 ### Matrix Product States (MPS)
 <p align="center" style="text-align: justify">
