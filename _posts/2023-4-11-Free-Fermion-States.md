@@ -1,11 +1,11 @@
 ---
-title: Free Fermion States and Its Entanglement Properties 
+title: (ZER Series) Free Fermion States and Its Entanglement Properties 
 layout: single 
 classes : wide
 author_profile: true
 read_time : true
 share : true 
-category : Entanglement Renormalization 
+category : Zipper Entanglement Renormalization 
 tags: 
     - Entanglement Renormalization  
     - Free Fermion States

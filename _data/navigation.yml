@@ -2,7 +2,7 @@ main:
   - title : "About"
     url: index.html
   - title : "Blog"
-    url: /year-archive/
+    url: /blog_homepage/index.html
   - title: "Research Interests "
     url : /interests/
   - title : "Resume"
