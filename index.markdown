@@ -24,7 +24,6 @@ Sing Lam Wong, **Ka Chun Pang** , Hoi Chun Po\
 
 
 # Handout
-
 * [Zipper Entanglement Renormalization PPT](/assets/Handout/Defense_PPT.pdf)
 
 ## Site 

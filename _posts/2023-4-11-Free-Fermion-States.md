@@ -1,4 +1,18 @@
 ---
+title: Free Fermion States and Its Entanglement Properties 
+layout: single 
+classes : wide
+author_profile: true
+read_time : true
+share : true 
+category : Entanglement Renormalization 
+tags: 
+    - Entanglement Renormalization  
+    - Free Fermion States
+---
+
+
+<!-- ---
 layout: posts
 classes: wide 
 title: Free Fermion States and Its Entanglement Properties 
@@ -9,7 +23,7 @@ category : Entanglement Renormalization
 tags: 
     - Entanglement Renormalization  
     - Free Fermion States
----
+--- -->
 
 # Introduction
 This is first blog for the [Zipper Entanglement Renormalization](https://arxiv.org/abs/2206.11761). In the paper, I and the collaborators used free fermion states as the example to demonstrate Zipper Entanglement Renormalization. The reason of using free fermion states is that the states is completely known in the form of density matrix. With the density matrix, its entanglement property is also known, enabling us to investigate the entanglement renormalization. 
