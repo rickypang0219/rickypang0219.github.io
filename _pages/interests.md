@@ -29,7 +29,7 @@ Tensor Network States (TNS) is a numerical tool to obtain an effective descripti
 ### Matrix Product States (MPS)
 <p align="center" style="text-align: justify">
     <img src="/assets/images/MPS.pdf">
-    Fig (2). The Matrix Product States (MPS). The tensor {% katexmm %} $ C^{i_1, \dots, i_N} ${% endkatexmm %} consists of large number of parameters {% katexmm %} $ \sim 2^{20} ${% endkatexmm %}. The MPS offers us a decomposition of the original tensor to multiple  matrices {% katexmm %} $ A^{i_\alpha} ${% endkatexmm %} with much smaller sizes. 
+    Fig (2). The Matrix Product States (MPS). The tensor {% katexmm %} $ C^{i_1, \dots, i_N} $ {% endkatexmm %} consists of large number of parameters {% katexmm %} $ \sim 2^{20} ${% endkatexmm %}. The MPS offers us a decomposition of the original tensor to multiple  matrices {% katexmm %} $ A^{i_\alpha} ${% endkatexmm %} with much smaller sizes. 
 </p>
 
 
