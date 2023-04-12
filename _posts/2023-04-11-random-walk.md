@@ -18,7 +18,7 @@ tags:
 
 
 # Gambler's ruin
-Gambler ruin is a betting game in which a gambler $$A$$ makes a sequence of $$ \$1 $$ bets. In each bet, gambler $$ A $$ has probability $$p$$ of winning the game and probability $$q = 1-p $$ of losing the bet. This gambler start with $$ \$ \text{i} $$ dollars. The gambler wins if he/she earns $$N$$ dollars in total or busts if he/she loses all the money. <span style="color:orange">**What's the probability that gambler $$A$$ wins the game?**</span>
+Gambler ruin is a betting game in which a gambler $$A$$ makes a sequence of $$ \$1 $$ bets. In each bet, gambler $$ A $$ has probability $$p$$ of winning the game and probability $$q = 1-p $$ of losing the bet. This gambler start with $$ \$ \text{i} $$ dollars. The gambler wins if he/she earns $$N$$ dollars in total or busts if he/she loses all the money. <span style="color:#a9dde0">**What's the probability that gambler $$A$$ wins the game?**</span>
 
 
 <p align="center" style="text-align: justify">
@@ -27,7 +27,7 @@ Gambler ruin is a betting game in which a gambler $$A$$ makes a sequence of $$ \
 </p>
 
 
-This gambler ruin is an example of  <span style="color:orange">**1D random walk**</span> between integer $$0$$ and $$ N$$ where in each step you have probability $$p$$ of winning $1 dollar (moving forward to $N) or losing $1 dollar (moving backward to $0). To answer the question, we need to use conditional probability and the law of total probability (LOTP). We first let $$ W $$ be the event of winning the game. We then let 
+This gambler ruin is an example of  <span style="color:#a9dde0">**1D random walk**</span> between integer $$0$$ and $$ N$$ where in each step you have probability $$p$$ of winning $1 dollar (moving forward to $N) or losing $1 dollar (moving backward to $0). To answer the question, we need to use conditional probability and the law of total probability (LOTP). We first let $$ W $$ be the event of winning the game. We then let 
 
 $$P_i = P( W \vert \text{A starts at i} ) $$
 
