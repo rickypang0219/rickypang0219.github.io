@@ -13,7 +13,7 @@ tags:
 ---
 
 # Introduction
-1D random walk is a discrete-time stochastics process. Although its idea is simple, its generalizations and applications are omnipresent in real-world such as stock market. Besides, it is a example of [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain) and [Martingale](https://en.wikipedia.org/wiki/Martingale_(probability_theory)). In this post, I will use Gambler ruin as an example to introduce 1D random walk, and then show how to relate it to martingale. 
+1D random walk is a discrete-time stochastics process. Although it's simple, its ideas and  applications are omnipresent in real-world application such as stock market. Besides, it is an example of [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain) and [Martingale](https://en.wikipedia.org/wiki/Martingale_(probability_theory)) in some conditions. In this post, I will use Gambler ruin as an example to introduce 1D random walk, and then discuss its properties. 
 
 
 
@@ -27,11 +27,25 @@ Gambler ruin is a betting game in which a gambler $$A$$ makes a sequence of $$ \
 </p>
 
 
-This gambler ruin is an example of  <span style="color:orange">**1D random walk**</span> between integer $$0$$ and $$ N$$ where in each step you have probability $$p$$ of winning $1 dollar (moving forward to $N) or losing $1 dollar (moving backward to $0 ).
+This gambler ruin is an example of  <span style="color:orange">**1D random walk**</span> between integer $$0$$ and $$ N$$ where in each step you have probability $$p$$ of winning $1 dollar (moving forward to $N) or losing $1 dollar (moving backward to $0). To answer the question, we need to use conditional probability and the law of total probability (LOTP). We first let $$ W $$ be the event of winning the game. We then let 
+
+$$P_i = P( W \vert \text{A starts at i} ) $$
+
+be the conditional probabilty of gambler A winning the game if he/she starts with $i dollars. Using the LOTP, conditioning on the outcome of the first round, we have 
+
+$$ \small
+\begin{align*}
+P_i &= P( W \vert \text{A starts at i, win 1 round} ) P(\text{win 1 round })  +   P( W \vert \text{A starts at i, lose 1 round} ) P(\text{lose 1 round }) \\ 
+&= P( W \vert \text{A starts at i+1} ) \cdot p   +   P( W \vert \text{A starts at i-1} ) \cdot q \\ 
+&= P_{i+1} \cdot p + P_{i-1} \cdot q 
+\end{align*}
+$$
+
+with the boundary conditions $$p_0 = 0 $$ and $$p_N = 1 $$. 
 
 
 
-# One-dimensional Random Walk
+# Properties of One-dimensional Random Walk
 The one-dimensional random walk is a stochastic process where at each step $$i$$, we either move forward or move backward on $$x$$ axis with corresponding probability. We can define a random variable at step $$i$$ 
 
 $$

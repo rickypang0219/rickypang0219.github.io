@@ -21,26 +21,26 @@ $$ H = t \sum_i   c^{\dagger}_i  c_j + h.c.  = \sum_i h_{ij}c^{\dagger}_i  c_j $
 
 is a free fermion model where $t$ is the hopping amplitude. The adjecitve 'free' means that the model is completely solvable and its energy spectrum is known. The above example indeed has an analytical form of its energy band, therefore it is a free fermion Hamiltonian. The ground state of free fermion Hamiltonians are called **Free Fermion States** and this states encode the low-energy behavior pf the systems. The free fermion (ground) states are the states filling up to Fermi Level. 
 
-$$ | \Psi \rangle = \prod_{k, E_k \leq E_F} \hat{c_k}^{\dagger} | 0 \rangle $$
+$$ \vert \Psi \rangle = \prod_{k, E_k \leq E_F} \hat{c}_k^{\dagger} \vert 0 \rangle $$
 
 
 
 # Free Fermion Correlation Matrix 
 One important feature of free fermion states is the correlation function. The systems/ states are fully determined by the corresponding correlation matrix by [Wick's theorem](https://en.wikipedia.org/wiki/Wick%27s_theorem). The correlation matrix $$C_{ij}$$ is the ground state expectation values of the creation and annihilation operators 
 
-$$ C_{ij} = \langle \Psi | \hat{c}_i^{\dagger} \hat{c}_j | \Psi \rangle .$$
+$$ C_{ij} = \langle \Psi \vert  \hat{c}_i^{\dagger} \hat{c}_j \vert \Psi \rangle .$$
 
-The correlation matrix is computatble using single-paritcle information. For paritcle number preserving free fermion Hamiltonian, we can diagonalize the single-particle hamiltonain $$h_{ij} = U_{ik}E_k U_{kj}^\dagger$$, where $$U_{ik}$$ and $$E_k$$ are the eigenvectors and energies. We can rotate the creation/ annihilation operator to $$ \hat{d}^{~~\dagger}_{k} = \sum_{i} U_{ik} \hat{c}^{~~\dagger}_i$$ and define the ground state as 
+The correlation matrix is computatble using single-paritcle information. For paritcle number preserving free fermion Hamiltonian, we can diagonalize the single-particle hamiltonain $$h_{ij} = U_{ik}E_k U_{kj}^\dagger$$, where $$U_{ik}$$ and $$E_k$$ are the eigenvectors and energies. We can rotate the creation/ annihilation operator to $$ \hat{d}^{\dagger}_{k} = \sum_{i} U_{ik} \hat{c}^{\dagger}_i$$ and define the ground state as 
 
-$$ | \Psi \rangle = \prod_{k, E_k \leq E_F}^{N_F} \hat d^{\dagger}_k  | 0 \rangle , $$
+$$ \vert \Psi \rangle = \prod_{k, E_k \leq E_F}^{N_F} \hat d^{\dagger}_k  \vert 0 \rangle , $$
 
 where $$N_F$$ is the number of $$k$$ below the Fermi Level. Therefore, we can compute the correlation matrix in the rotated operators basis
 
 $$
 \begin{align*}
-    C_{ij} = \langle \Psi | \hat c^{\dagger}_{i} \hat c_{j} | \Psi \rangle 
-    &= \langle \Psi | U^{\dagger}_{li} \hat d^{\dagger}_{l} U_{jm} \hat d_{m} | \Psi \rangle \\ 
-    &=  U^{\dagger}_{li} U_{jm}  \langle \Psi | \hat d^{\dagger}_{l} \hat d_{m} | \Psi \rangle \\ 
+    C_{ij} = \langle \Psi \vert \hat c^{\dagger}_{i} \hat c_{j} \vert \Psi \rangle 
+    &= \langle \Psi \vert U^{\dagger}_{li} \hat d^{\dagger}_{l} U_{jm} \hat d_{m} \vert \Psi \rangle \\ 
+    &=  U^{\dagger}_{li} U_{jm}  \langle \Psi \vert \hat d^{\dagger}_{l} \hat d_{m} \vert \Psi \rangle \\ 
     &=  U^{\dagger}_{li} U_{jm}   \delta_{lm} \\
     &= \sum_{l}^{N_F} U_{jl}U^{\dagger}_{li} ~.  
 \end{align*}
@@ -87,9 +87,10 @@ $$
 $$
 
 is simply the expectation value of the number operator. From statistical physics, the expectation values of the number operator to the mode is $$\frac{e^{-E_{\alpha}}}{1+e^{-E_\alpha}}$$. The above equation connects single-particle sector of entanglement Hamiltonian $$h^{R}$$ and the restricted correlation matrix. In other words, we have the matrix form  
-\begin{equation}
-	h^{R^{T}} = \ln \Bigg( \frac{1- C_R}{C_R} \Bigg) ~.
-\end{equation}
+
+$$
+	h^{T}_R = \ln \Bigg( \frac{1- C_R}{C_R} \Bigg) ~.
+$$
 
 Last but not least, with the entanglement Hamiltonian, we can to compute the entanglement entropy. As introduced in previous chapter, the von Neumann entropy is defined as 
 
