@@ -128,9 +128,55 @@ In here we are going to derive the equation governing the simple random walk in 
 
 $$
 \rho( \vec r,t+ \tau) = \int \rho( \vec r - \vec \Delta, t) g(\vec \Delta) d^3 \vec \Delta 
-
 $$
 
+Suppose the jump is small enough $$ \vert \Delta \vert \approx 0 $$, we can Taylor expand the probability distribution $$\rho(\vec r - \vec \Delta, t) $$ to 
+
+$$
+\rho( \vec r - \vec \Delta,t  ) = \rho(\vec r, t) - \vec \nabla \rho  \cdot \vec \Delta + \frac{1}{2} \sum_{ij} \partial_i \partial_j  \rho \Big \vert_{\vec r} \Delta_i \Delta_j , 
+$$
+
+where $$\vec \nabla \rho  \cdot \vec \Delta$$ is the directional derivative along the vector $$\vec \Delta$$. Since we are dealing with simple random walk model, it means that the probability of jumping to $$\pm \vec \Delta $$ is the same where $$R( \theta) $$ is the rotation matrix. Hence, the second term will be vanished 
+
+$$
+\int (\vec \nabla \rho  \cdot \vec \Delta) g(\vec \Delta) d^3 \vec \Delta = 0
+$$
+
+The first order approximation of probability distribution vanishes and this is why we need to Taylor exapnd to second order term. By plugging in the Taylor expansion of probability distribution back to the integral, we have 
+
+$$
+\begin{align}
+\rho( \vec r, t + \tau ) & = \int \Big ( \rho(\vec r, t) + \frac{1}{2} \sum_{ij} \partial_i \partial_j  \rho \Big \vert_{\vec r} \Delta_i \Delta_j \Big) g( \vec \Delta) d^3 \vec \Delta  \\ 
+&= \int \rho(\vec r, t) g(\vec \Delta) d^3 \vec \Delta + \int   \frac{1}{2} \sum_{ij} \partial_i \partial_j  \rho \Big \vert_{\vec r} \Delta_i \Delta_j  g( \vec \Delta) d^3 \vec \Delta \\
+&= \rho(\vec r , t ) + \frac{1}{2} \sum_{ij} \partial_{i} \partial_{j} \rho \Big \vert_{\vec r} \int \Delta_i \Delta_j g( \vec \Delta) d^3 \vec \Delta 
+\end{align}
+$$
+
+Using the same argument of simple random walk in which the probability of jumping anywhere is isotropic, we can simplify the integral in last line by inspecting $$g(x, y,z) = g(-x, y,z) $$. Therefore, if $$ i \neq j $$ the integral term vanishes and only survives when $$i = j$$. With this isotropic property we can further massage the integral 
+
+$$
+\sum_i \int \Delta_i^2 g(\vec \Delta ) d^{3} \vec \Delta = \sum_{ij} \langle \Delta_i^2 \rangle 
+$$
+
+which is the expectation value of $$\Delta^2_i$$. We can solve it by using simple argument based on isotropic condition. Recall that in three dimension length of a vector $$\vec \Delta $$ is given by $$ \vert \vec\Delta \vert^2 = \Delta_x^2 + \Delta_y^2 + \Delta_z^2$$. If we take the expectation value of it, it becomes 
+
+$$
+\begin{align}
+\langle \vert \vec\Delta \vert^2  \rangle &= \langle \Delta_x^2 \rangle + \langle \Delta_y^2 \rangle +\langle \Delta_z^2 \rangle  \\ 
+&= 3 \langle \Delta_x^2 \rangle
+\end{align}
+$$
+
+where in last step we use the isotropic condition that jumping to $$x,y,z$$ direction is same. Therefore, the integral now becomes the $$\langle \Delta^2_i \rangle = \frac{1}{3} \langle \Delta^2 \rangle $$ which is the second momemnt of $$\Delta$$. The time evolution of the probability distribution is 
+
+$$
+\begin{align}
+\rho(\vec r,t + \tau) - \rho(\vec r, t) &\approx \frac{1}{2* 3} \sum_{ij} \langle \Delta^2 \rangle \partial_i \partial_j \rho(\vec r,t ) \\
+\partial_t \rho(\vec r, t) &= D \nabla^2 \rho(\vec r,t) ~,D = \frac{ \langle \Delta^2 \rangle}{6 \tau}
+\end{align}
+$$
+
+if we let $$\tau \approx 0 $$ and $$\rho(\vec r,t + \tau) - \rho(\vec r, t) = \frac{\partial \rho}{\partial t} \tau$$. This is the <span style="color:#a9dde0"> **diffusive equation** </span> and we can solve it in either using Fourier analysis or Feynman propagator(aka Heat Kernel). The solution of the diffusive equation depends on the boundary conditions. 
 
 
 
