@@ -122,6 +122,18 @@ where $$n$$ is the number of steps of random walk, or you can view it as number 
 
 
 
+
+# Random Walk in Higher Dimension
+In here we are going to derive the equation governing the simple random walk in higher dimension, which is the diffusion equation. The approach will have discrete time steps, but the steps direction is a continuous random variable associating with the probability distribution $$g(\vec \Delta)$$, where $$\vec \Delta$$ is a unit vector in higher dimension. What we want is probability distribution $$\rho(\vec r,t)$$ describing the position of random walk at time $$t$$. The corresponding probabiliy $$\rho(\vec r, t) dV $$ will be the probability that the random walker appears in the region $$dV$$. One interesting question is to ask how the probability distribution evolves in time. In next time step $$t + \tau $$, the random walker will randomly go to somewhere according to the probability $$g(\vec \Delta) $$. Therefore, what we really interested is the probability distribution of the random walker $$\rho( \vec r , t + \tau) $$ at later time step and position $$\vec r$$. It can be calculated by marginalizing the probability of $$g(\vec \Delta)$$
+
+$$
+\rho( \vec r,t+ \tau) = \int \rho( \vec r - \vec \Delta, t) g(\vec \Delta) d^3 \vec \Delta 
+
+$$
+
+
+
+
 # Summary
 
 
