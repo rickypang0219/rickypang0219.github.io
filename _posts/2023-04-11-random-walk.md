@@ -62,7 +62,7 @@ $$
 W = \sum^{n}_{k=1} X_{k} +  X_0 = X_n + X_{n-1} + \cdots + X_1 + X_0
 $$
 
-where $$X_k$$ is a random variable indicating whether we win or lose $$i$$-th round. $$W$$ also is a random variable since the sum of random variable is a random variable. The explicit form of $$ X_k $$ is
+where $$X_k$$ is a random variable indicating whether we win or lose $$i$$-th round. These $$X_k$$'s are <span style="color:#a9dde0">**indentically and independetly distributed(i.i.d)**</span>.   $$W$$ also is a random variable since the sum of random variable is a random variable. The explicit form of $$ X_k $$ is
 
 $$
 X_k=
@@ -120,6 +120,8 @@ $$
 where $$n$$ is the number of steps of random walk, or you can view it as number of rounds in the gambler ruin example. 
 
 
+
+<p style="color:red;"> **Remaining Gaussian distribution**</p>
 
 
 
