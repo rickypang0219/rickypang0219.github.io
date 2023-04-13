@@ -13,7 +13,7 @@ tags:
 ---
 
 # Introduction
-1D random walk is a discrete-time stochastics process. Although it's simple, its ideas and  applications are omnipresent in real-world application such as stock market. Besides, it is an example of [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain) and [Martingale](https://en.wikipedia.org/wiki/Martingale_(probability_theory)) in some conditions. In this post, I will use Gambler ruin as an example to introduce 1D random walk, and then discuss its properties. 
+1D random walk is a discrete-time stochastics process. Although it's simple, its ideas and  generalizations are omnipresent in real-world application such as stock market. Besides, it is an example of [Markov Chain](https://en.wikipedia.org/wiki/Markov_chain) and [Martingale](https://en.wikipedia.org/wiki/Martingale_(probability_theory)) in some conditions. In this post, I will use Gambler ruin as an example to introduce 1D random walk, and then discuss its properties. 
 
 
 
@@ -41,20 +41,95 @@ P_i &= P( W \vert \text{A starts at i, win 1 round} ) P(\text{win 1 round })  + 
 \end{align*}
 $$
 
-with the boundary conditions $$p_0 = 0 $$ and $$p_N = 1 $$. 
+with the boundary conditions $$p_0 = 0 $$ and $$p_N = 1 $$. This is the difference equation and its solution is 
+
+$$
+P_i=
+    \begin{cases}
+      \frac{1- \big(  \frac{p}{q} \big)^{i}  }{1- \big(  \frac{p}{q} \big)^{N} }, & p \neq q ;  \\
+      \frac{i}{N}, & p = q = 0.5.
+    \end{cases} 
+$$
+
+
 
 
 
 # Properties of One-dimensional Random Walk
-The one-dimensional random walk is a stochastic process where at each step $$i$$, we either move forward or move backward on $$x$$ axis with corresponding probability. We can define a random variable at step $$i$$ 
+The gambler ruin example is an example of one-dimensional random walk because at each step we either go forward to the $N dollars or move backward tp $0 dollar with given probabilities. In this section, we focus on the statistical property of the random walk model. Suppose we start the gambler ruin game at $$X_0$$ dollars and we follow the rules of gambler ruin. At $$n \in \mathbb N$$ steps the current money of a gambler is 
 
 $$
-X_i=
+W = \sum^{n}_{k=1} X_{k} +  X_0 = X_n + X_{n-1} + \cdots + X_1 + X_0
+$$
+
+where $$X_k$$ is a random variable indicating whether we win or lose $$i$$-th round. $$W$$ also is a random variable since the sum of random variable is a random variable. The explicit form of $$ X_k $$ is
+
+$$
+X_k=
     \begin{cases}
-      1, & P( X = 1) = p \\
-      -1, & P( X = -1) = q = 1 - p 
-    \end{cases} ~~, 
+      1, & P( X = 1) = p ;\\
+      -1, & P( X = -1) = q = 1 - p.
+    \end{cases}, 
 $$
 
-where $$p, q$$ are the probabilities satisfying $$p + q = 1$$. In the **simple** random walk case we set $$p = q = 0.5$$. 
+where $$p, q$$ are the probabilities of winning and losing the current round, respectively. In the **simple** random walk case we set $$p = q = 0.5$$. We now focus on the  <span style="color:#a9dde0">**simple random walk**</span> problem where $$p=q = 0.5$$ and $$X_0 = 0$$. Given a random variable, we are intersted the summary statistics associated with it such as the expectation value, variance, or the moments. The expectation value of <span style="color:#a9dde0">**simple**</span> random walk is 0 by symmetry. Apart from this argument, we can calculate it explicity using the linearity of expectation value
 
+$$
+\begin{align*}
+\mathbb E [ W ] &= \mathbb E \big[  \sum^{n}_{k=1} X_{k} +  X_0  \big]  = \sum^n_{k=1} \mathbb E [X_i] + X_0 = 0 \\
+\mathbb E [X_i] &= (1) \cdot p + (-1) \cdot q = 0 , 
+\end{align*}
+$$
+
+under the conditions of $$X_0 = 0 $$ and $$p =q $$. Besides, we can calculate the  variance of $$W$$ in similar manner. Recall the formula of the variance of a random variable
+
+$$
+\begin{align*}
+\text{Var}(W) &= \mathbb E [ (W - \mathbb E[W] )^2  ] \\ 
+&= \mathbb E [ W^2 - 2  W \mathbb E[W] + (\mathbb E[W])^2 ] \\ 
+&= \mathbb E[W^2] - 2 \mathbb E[W] \mathbb E[W] + (\mathbb E[W])^2 \\
+&= \mathbb E[W^2] - \mathbb E[W]^2 . 
+\end{align*}
+$$
+
+The unknown part inside the formula of variance is the $$\mathbb E[W^2]$$. To solve this we can expand the term inside the expectation value
+
+$$
+\begin{align*}
+\mathbb E[W^2] &= \mathbb E [ \sum_k \sum_i X_{k}X_{i}]  \\
+&= \sum_{ik} \mathbb E[X_k X_i] .
+\end{align*}
+$$
+
+There are two possible outcomes of the $$\mathbb E[X_k X_i] $$ depending on the indices $$i,k$$. When $$i=k$$ the expectation values is the variance of the $$X_i$$. On the other hand, if $$k \neq i$$ we can factorize $$\mathbb E[X_k X_i] = \mathbb E[X_k] \mathbb E[X_i] $$ since <span style="color:#a9dde0"> **$$X_k$$'s are i.i.d.** </span>
+
+$$
+\mathbb E[X_k X_i ] =
+    \begin{cases}
+      \mathbb E [X_k^2] \delta_{ik} = p \cdot (1)^2 + q \cdot (-1)^2 =1 \delta_{ik}, & k = i ;\\
+      \mathbb E[X_i] \mathbb E[X_k] = 0, & i \neq k.
+    \end{cases}, 
+$$
+
+Therefore, the variance of $$W$$ is simply the summing all the terms of $$\mathbb E [X_k^2]$$ 
+
+$$
+\text{Var}  [W] = \sum_{ik} \mathbb E [X_kX_i] \delta_{ik}  = \sum_i \mathbb E[X_i^2] = n 
+$$
+
+where $$n$$ is the number of steps of random walk, or you can view it as number of rounds in the gambler ruin example. 
+
+
+
+
+# Summary
+
+
+
+
+
+### References 
+* [Harvard Stat 110 Lecture 7](https://youtu.be/PNrqCdslGi4)
+* [MIT 18.S096 Lecture 5](https://youtu.be/TuTmC8aOQJE)
+* [Introduction to Probability by Joseph Blitzstein & Jessica Hwang](https://drive.google.com/file/d/1VmkAAGOYCTORq1wxSQqy255qLJjTNvBI/view)
+* [Thinking Probabilistically by Ariel Amir](https://www.cambridge.org/core/books/thinking-probabilistically/4715E96F0FC041FC0C3EEB5EF8002C8F)
