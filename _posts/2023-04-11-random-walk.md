@@ -119,11 +119,20 @@ $$
 
 where $$n$$ is the number of steps of random walk, or you can view it as number of rounds in the gambler ruin example. 
 
+<p align="center" style="text-align: justify" >
+    <img src="/assets/post_images/random_walk/random_walk.svg" alt > 
+    <br>
+    Fig (2). Simple random walk in one dimension. The probability of moving $$\pm x$$ directions are the same. The black dash lines denote the variance of the simple random walk $$\text{Var}(W) = n $$, where $$n$$ is the steps.
+</p>
 
+The remaining problem is to ask what is the probability distribution of the position of the random walker after $$N$$ steps. We will find out this probability in two ways. The first and easiest way is to use [Central Limit Theorem](https://en.wikipedia.org/wiki/Central_limit_theorem). The random variables $$X_k$$'s are i.i.d and the random walk is the sum of these $$X_k$$'s. Therefore, Central Limit Theorem assures that the corresponding distribution converges in Normal distribution if $$X_k$$'s have finite variance
 
-<p style="color:red;"> **Remaining Gaussian distribution**</p>
+$$
+W = X_N + \cdots X_1 \sim \mathcal{N}( 0, N ) 
+$$
 
-
+since $$\mathbb E[W] =0 $$ and $$\text{Var}(W) = N$$. 
+ 
 
 # Random Walk in Higher Dimension and the diffisive property
 In here we are going to derive the equation governing the simple random walk in higher dimension, which is the diffusion equation. The approach will have discrete time steps, but the steps direction is a continuous random variable associating with the probability distribution $$g(\vec \Delta)$$, where $$\vec \Delta$$ is a unit vector in higher dimension. What we want is probability distribution $$\rho(\vec r,t)$$ describing the position of random walk at time $$t$$. The corresponding probabiliy $$\rho(\vec r, t) dV $$ will be the probability that the random walker appears in the region $$dV$$. One interesting question is to ask how the probability distribution evolves in time. In next time step $$t + \tau $$, the random walker will randomly go to somewhere according to the probability $$g(\vec \Delta) $$. Therefore, what we really interested is the probability distribution of the random walker $$\rho( \vec r , t + \tau) $$ at later time step and position $$\vec r$$. It can be calculated by marginalizing the probability of $$g(\vec \Delta)$$
