@@ -9,7 +9,7 @@ author_profile: true
 title : About Me
 ---
 
-Hi! I am an aspiring M.Phil graduate at the Hong Kong University of Science and Technology (HKUST). In the past three years, I researched condensed matter theory and statistical inference in astrophysics under Prof. [Adrian Po](https://physics.ust.hk/eng/people_detail.php?pplcat=1&id=613) and Prof. [George Smoot](https://ias.hkust.edu.hk/people/ias-members/faculty/prof-george-smoot), respectively.
+Hi! I am an aspiring M.Phil graduate at the Hong Kong University of Science and Technology (HKUST). In the past three years, I researched condensed matter theory and statistical inference in astrophysics under Prof. [Adrian Po](https://physics.ust.hk/eng/people_detail.php?pplcat=1&id=613) and Prof. [George Smoot (2006 Nobel Prize Laureate)](https://en.wikipedia.org/wiki/George_Smoot), respectively.
 
 During my undergraduate studies, I was elected to be the  [CERN](https://home.cern) (European Organization for Nuclear Research) summer UG researcher in the data science and particle physics track. Besides, I worked with Prof. [Yi Wang](https://physics.ust.hk/eng/people_detail.php?pplcat=1&id=223) on the relation between the primordial universe and gravitational wave production as my final year project. Apart from research activities, I emphasized on sharing scientific ideas, which drove me to become a STEM tutor. As a STEM tutor, I shared and hosted several exhibitions and workshops for the general public and minorities in Hong Kong. You can find more about me in the [resume](/assets/resume/Pang_KaChun_CV.pdf).
 

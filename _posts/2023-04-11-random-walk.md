@@ -120,9 +120,9 @@ $$
 where $$n$$ is the number of steps of random walk, or you can view it as number of rounds in the gambler ruin example. 
 
 <p align="center" style="text-align: justify" >
-    <img src="/assets/post_images/random_walk/random_walk.svg" alt > 
+    <img src="/assets/post_images/random_walk/random_walk2.svg" alt > 
     <br>
-    Fig (2). Simple random walk in one dimension. The probability of moving $$\pm x$$ directions are the same. The black dash lines denote the variance of the simple random walk $$\text{Var}(W) = n $$, where $$n$$ is the steps.
+    Fig (2). Simple random walk in one dimension. The probability of moving $$\pm x$$ directions are the same. The black dash lines denote the variance of the simple random walk $$\text{Var}(W) = n $$, where $$n$$ is the steps. The code is available in [here](https://github.com/rickypang0219/stochastic_process)!
 </p>
 
 The remaining problem is to ask what is the probability distribution of the position of the random walker after $$N$$ steps. We will find out this probability in two ways. The first and easiest way is to use [Central Limit Theorem](https://en.wikipedia.org/wiki/Central_limit_theorem). The random variables $$X_k$$'s are i.i.d and the random walk is the sum of these $$X_k$$'s. Therefore, Central Limit Theorem assures that the corresponding distribution converges in Normal distribution if $$X_k$$'s have finite variance
@@ -166,7 +166,7 @@ $$
 Using the same argument of simple random walk in which the probability of jumping anywhere is isotropic, we can simplify the integral in last line by inspecting $$g(x, y,z) = g(-x, y,z) $$. Therefore, if $$ i \neq j $$ the integral term vanishes and only survives when $$i = j$$. With this isotropic property we can further massage the integral 
 
 $$
-\sum_i \int \Delta_i^2 g(\vec \Delta ) d^{3} \vec \Delta = \sum_{ij} \langle \Delta_i^2 \rangle 
+\sum_i \int \Delta_i^2 g(\vec \Delta ) d^{3} \vec \Delta = \sum_{i} \langle \Delta_i^2 \rangle 
 $$
 
 which is the expectation value of $$\Delta^2_i$$. We can solve it by using simple argument based on isotropic condition. Recall that in three dimension length of a vector $$\vec \Delta $$ is given by $$ \vert \vec\Delta \vert^2 = \Delta_x^2 + \Delta_y^2 + \Delta_z^2$$. If we take the expectation value of it, it becomes 
