@@ -179,7 +179,7 @@ $$
 which is the Normal distribution with zero mean and standard deviation $$\sigma = \sqrt N$$. Therefore we show the distance $$M$$ after $$N$$ steps in the random walk is distributed as 
 
 $$
-M \sim \mathcal N (0, \sqrt N)
+M \sim \mathcal N (0, N)
 $$
 
 which matches the result given by Central Limit Theorem. 
