@@ -242,7 +242,7 @@ if we let $$\tau \approx 0 $$ and $$\rho(\vec r,t + \tau) - \rho(\vec r, t) = \f
 
 
 # Summary
-
+In this post, we first introduce the random walk using Gambler ruin example in wihch a gambler can win or lose $1 dollar at each round. Then we hope to find out the probability of winning of the gambler given that he/she starts the game at $i dollar. Soving the difference equation we obtain the solutions of the winning probability op  the gambler. In next step, we focus on the statistics of the simple random walk model and find out its probability distribution of the position $$M$$ at $$N$$ steps using CLT argument and direct computation. Lastly, we discuss higher dimension form of simple random walk and its diffisive property governed by diffisive equation. 
 
 
 
