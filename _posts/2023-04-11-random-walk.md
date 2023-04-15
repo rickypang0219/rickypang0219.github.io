@@ -131,10 +131,60 @@ $$
 W = X_N + \cdots X_1 \sim \mathcal{N}( 0, N ) 
 $$
 
-since $$\mathbb E[W] =0 $$ and $$\text{Var}(W) = N$$. 
- 
+since $$\mathbb E[W] =0 $$ and $$\text{Var}(W) = N$$. Another way is to compute the probability distribution explicitly. The probability distribution we interested is the position distribution after $$N$$ steps at position $$M$$. From random walk property, $$M$$ is even only when $$N$$ is also even. For a random walk, we can encode the "path" into a string like 
 
-# Random Walk in Higher Dimension and the Diffisive Property
+$$
+[-1,1,1,-1,1,1,-1,1,\dots, -1,1 ] .
+$$
+
+The reason of encoding the random walk into a string is that it remminds us the  <span style="color:#a9dde0"> **Binomial distribution** </span> for coin tosses. For coin tosses example, $$X$$ number of heads is binomial distributed
+
+$$
+X \sim Bin(N,p)  ~,~ P ( X = k) = {N \choose k} p^{N-k} q^k 
+$$
+
+with probability $$p$$ for the occurence of head in a toss and corresponding distribution $$P(X = k) $$ for $$k \in \mathbb{N}$$. The combinatoric factor counts for the number of combinations satisfying $$k$$ heads for instance. Back to the random walk, it has the same structure of coin toss, thus it follows binomial distribution 
+
+$$
+\begin{align}
+P_M  &= {N \choose R } p^{N - R} q^{R} \\
+&= {N \choose R} \Big( \frac{1}{2} \Big)^{N- R } \Big( \frac{1}{2} \Big)^{R } \\
+&= \frac{N !}{ (N - R)! R! } \Big( \frac{1}{2} \Big)^{N}
+\end{align}
+$$
+
+where $$R$$ is the number of steps to the right and $$N - R$$ is the number of steps moving to left. Therefore, the distance of a random walk should be the difference between number of steps to the right and left which is $$M = R - (N - R) = 2R - N $$. Notice that though $$N$$ is a number we known, $$R$$ and $$M$$ are random variables. Suppose the  number of total steps $$N$$ is large enough, we can apply Stirling approximation $$ N! = \sqrt{2 \pi N} ( N/ e )^{N} $$ and obtain the following 
+
+$$ \small
+P_M \approx \frac{1}{\sqrt{2 \pi}} \exp \Big [- N \log 2 + (N +1/2) \log N - (R + 1/2) \log R - (N - R +1/2 ) \log (N-R) \Big ].
+$$
+
+In here, we use another approximation that $$N \gg M $$ and $$R \approx 1/2$$ and consider the $$\log R$$ term
+
+$$
+\begin{align} 
+\log R &= \log( (N + M)/2 ) \\ 
+&= \log N/2 ( 1+ 2M/N) \\ 
+&= \log N/2 + \log(1 + 2M/N) \\ 
+& \sim \log N/2 + M/N  + M^2/N^2
+\end{align}
+$$
+
+by using Taylor expansion in third line. By using this trick in other terms, we obtain the following
+
+$$
+P_M \approx \frac{1}{\sqrt{2 \pi N}} e^{- \frac{M^2}{N}}
+$$
+
+which is the Normal distribution with zero mean and standard deviation $$\sigma = \sqrt N$$. Therefore we show the distance $$M$$ after $$N$$ steps in the random walk is distributed as 
+
+$$
+M \sim \mathcal N (0, \sqrt N)
+$$
+
+which matches the result given by Central Limit Theorem. 
+
+# Random Walk in Higher Dimension and the Diffisive Pfroperty
 In here we are going to derive the equation governing the simple random walk in higher dimension, which is the diffusion equation. The approach will have discrete time steps, but the steps direction is a continuous random variable associating with the probability distribution $$g(\vec \Delta)$$, where $$\vec \Delta$$ is a unit vector in higher dimension. What we want is probability distribution $$\rho(\vec r,t)$$ describing the position of random walk at time $$t$$. The corresponding probabiliy $$\rho(\vec r, t) dV $$ will be the probability that the random walker appears in the region $$dV$$. One interesting question is to ask how the probability distribution evolves in time. In next time step $$t + \tau $$, the random walker will randomly go to somewhere according to the probability $$g(\vec \Delta) $$. Therefore, what we really interested is the probability distribution of the random walker $$\rho( \vec r , t + \tau) $$ at later time step and position $$\vec r$$. It can be calculated by marginalizing the probability of $$g(\vec \Delta)$$
 
 $$
