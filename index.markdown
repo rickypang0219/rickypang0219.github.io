@@ -13,7 +13,7 @@ Hi! I am an aspiring M.Phil graduate at the Hong Kong University of Science and 
 
 During my undergraduate studies, I was elected to be the  [CERN](https://home.cern) (European Organization for Nuclear Research) summer UG researcher in the data science and particle physics track. Besides, I worked with Prof. [Yi Wang](https://physics.ust.hk/eng/people_detail.php?pplcat=1&id=223) on the relation between the primordial universe and gravitational wave production as my final year project. Apart from research activities, I emphasized on sharing scientific ideas, which drove me to become a STEM tutor. As a STEM tutor, I shared and hosted several exhibitions and workshops for the general public and minorities in Hong Kong. You can find more about me in the [resume](/assets/resume/Pang_KaChun_CV.pdf).
 
-My belief is “Ideas worth sharing”,  which coincides with the aim of TED talk. This website is a starting point to share knowledge, including mathematics, quantitative finance, and physics. I hope someone will find the content here helpful and spread the knowledge to the world!
+My belief is “Ideas worth sharing”,  which coincides with the aim of TED talk. This website is a starting point to share knowledge, including <span style="color:#a9dde0">mathematics, quantitative finance, and physics </span>. I hope someone will find the content here helpful and spread the knowledge to the world!
 
 
 # Education 
