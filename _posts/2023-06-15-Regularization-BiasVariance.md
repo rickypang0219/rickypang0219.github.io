@@ -14,7 +14,7 @@ tags:
 
 
 # Introduction
-This is a self-learning note of Standford open course CS229. In this post I will talk about the bias-variance tradeoff of machine learning algorithms and how to avoid overfitting using regularization.  
+This is a self-learning note of Stanford open course CS229. In this post I will talk about the bias-variance tradeoff of machine learning algorithms and how to avoid overfitting using regularization.  
 
 # Bias and Variance 
 
