@@ -1,0 +1,24 @@
+{
+    "jobExperiences": [
+      {
+        "jobTitle": "Software Engineer",
+        "companyName": "Example Tech",
+        "jobDuties": [
+          "Developed and maintained web applications using JavaScript, HTML, and CSS.",
+          "Collaborated with cross-functional teams to design and implement new features.",
+          "Performed code reviews and provided feedback to team members.",
+          "Troubleshot and resolved software defects and issues."
+        ]
+      },
+      {
+        "jobTitle": "Product Manager",
+        "companyName": "ABC Corporation",
+        "jobDuties": [
+          "Led product planning and strategy for a new software product.",
+          "Conducted market research and analyzed user feedback to inform product decisions.",
+          "Worked closely with development teams to prioritize and execute product roadmap.",
+          "Collaborated with sales and marketing teams to drive product adoption and revenue growth."
+        ]
+      }
+    ]
+  }

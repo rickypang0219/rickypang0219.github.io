@@ -1,0 +1,30 @@
+[
+    {
+        "file": "Regularization-BiasVariance",
+        "title": "Bias-Variance Tradeoff & Regularization",
+        "author": "Ricky Pang",
+        "date": "2023-08-15",
+        "category": "Deep Learning"
+    },
+    {
+        "file": "fluent-python-7",
+        "title": "Chapter 7 - Functions as First-Class Objects",
+        "author": "Ricky Pang",
+        "date": "2023-08-14",
+        "category": "Python"
+    },
+    {
+        "file": "interests",
+        "title": "Research Interests",
+        "author": "Ricky Pang",
+        "date": "2023-08-12",
+        "category": "Python"
+    },
+    {
+        "file": "random-walk",
+        "title": "One-dimensional Random Walk",
+        "author": "Ricky Pang",
+        "date": "2023-08-10",
+        "category": "Quant"
+    }
+]
