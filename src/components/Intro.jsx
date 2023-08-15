@@ -31,7 +31,8 @@ const Banner = () => {
     <>
       <Box
         sx={{
-          height: "260px",
+          justifyContent: "left",
+          height: "350px",
           display: { xs: "flex", md: "none" },
         }}
       >

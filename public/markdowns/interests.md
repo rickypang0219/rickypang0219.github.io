@@ -22,4 +22,3 @@ Tensor Network States (TNS) is a numerical tool to obtain an effective descripti
     <img src="/assets/images/MERA.svg">
     Fig (3). The Multiscale Entanglement Renormalization Ansatz (MERA). Similar to the spirit of MPS, it decomposes a large tensor to multiple matrices with smaller sizes. However, it does one small steps to obtain the effective description using the physical process **Entanglement Renormalization** we discussed before. 
 </p>  -->
-
