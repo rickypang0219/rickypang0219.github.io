@@ -31,7 +31,7 @@ const Profile = ({ theme }) => {
       >
         <Avatar
           alt="Ricky Pang"
-          src="src/assets/propic.JPEG"
+          src="/images/propic.JPEG"
           sx={{ height: 170, width: 170 }}
         >
           {" "}
@@ -98,7 +98,7 @@ const Profile = ({ theme }) => {
         <Stack direction="row" spacing={2} style={{ alignItems: "center" }}>
           <Avatar
             alt="Ricky Pang"
-            src="src/assets/propic.JPEG"
+            src="/images/propic.JPEG"
             sx={{ height: 120, width: 120 }}
           >
             {" "}
