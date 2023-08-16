@@ -1,5 +1,12 @@
 [
     {
+        "file": "CS50-lect2",
+        "title": "CS50 Lecture 2: Array in C",
+        "author": "Ricky Pang",
+        "date": "2023-08-16",
+        "category": "C Programming"
+    },
+    {
         "file": "Regularization-BiasVariance",
         "title": "Bias-Variance Tradeoff & Regularization",
         "author": "Ricky Pang",
