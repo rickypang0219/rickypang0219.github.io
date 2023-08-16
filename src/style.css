@@ -1,0 +1,21 @@
+/* styles.css */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+
+  /* XS screen size */
+  img {
+    width: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  /* MD screen size */
+  img {
+    width: 1000px;
+  }
+}

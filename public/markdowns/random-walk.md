@@ -7,6 +7,7 @@
 Gambler ruin is a betting game in which a gambler $$A$$ makes a sequence of $$ \$1 $$ bets. In each bet, gambler $$ A $$ has probability $$p$$ of winning the game and probability $$q = 1-p $$ of losing the bet. This gambler start with $$ \$ \text{i} $$ dollars. The gambler wins if he/she earns $$N$$ dollars in total or busts if he/she loses all the money. <span style="color:#a9dde0">**What's the probability that gambler $$A$$ wins the game?**</span>
 
 
+
 <p align="center" style="text-align: justify">
     <img src="/images/random_walk/random_walk.png" width="1000" height="300" />
 </p>
