@@ -207,7 +207,6 @@ const Employment = ({ theme }) => {
                 <Grid item xs={12} sm={6}>
                   <Typography component="ul">
                     <Typography component="li">
-
                       Build classification model to investigat client loss with
                       Artifical Neural Network
                     </Typography>
@@ -284,16 +283,18 @@ const Employment = ({ theme }) => {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                  <Typography component="ul">
+                  <Typography component="ul" justifyContent={'center'}>
                     <Typography component="li">
-                      Build classification model to investigat client loss with
-                      Artifical Neural Network
+                      <span style={{ fontWeight: "bold" }}> First team </span> to invent cutting-edge quantum states compression
                     </Typography>
                     <Typography component="li">
-                      Levergaed LSTM RNN to forecast time series
+                      Optimized statistical models for better decision making
                     </Typography>
                     <Typography component="li">
-                      Collaborated in an international research group
+                      Reduced complexity in large-scale computations using Tensor-Network algorithm
+                    </Typography>
+                    <Typography component="li">
+                      Instructed two-semester upper-division courses and achieved a teaching rating of over 90%
                     </Typography>
                   </Typography>
                 </Grid>
@@ -402,23 +403,19 @@ const Education = ({ theme }) => {
                       Hong Kong University of Science and Technology
                     </span>{" "}
                     <br />
-                    Master of Philosophy in Physics
+                    Master of Philosophy,  Physics
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6}>
+                  <Typography style={{ fontWeight: "bold" }}>
+                    DS related:
+                  </Typography>
                   <Typography component="ul">
                     <Typography component="li">
-                      {" "}
-                      Build classification model to investigat client loss with
-                      Artifical Neural Network{" "}
+                      Quantum Simulation using Python
                     </Typography>
                     <Typography component="li">
-                      {" "}
-                      Levergaed LSTM RNN to forecast time series{" "}
-                    </Typography>
-                    <Typography component="li">
-                      {" "}
-                      Collaborated in an international research group
+                      Features Extraction with Auto-Encoder/CNN
                     </Typography>
                   </Typography>
                 </Grid>
@@ -491,7 +488,7 @@ const Education = ({ theme }) => {
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <Typography style={{ fontWeight: "bold" }}>
-                    IT related fields
+                    DS related:
                   </Typography>
                   <Typography component="ul">
                     <Typography component="li">
@@ -504,7 +501,7 @@ const Education = ({ theme }) => {
                     </Typography>
                   </Typography>
                   <Typography style={{ fontWeight: "bold" }}>
-                    Quant related fields
+                    Quant related:
                   </Typography>
                   <Typography component="ul">
                     <Typography component="li">
@@ -513,7 +510,7 @@ const Education = ({ theme }) => {
                     </Typography>
                     <Typography component="li">
                       {" "}
-                      Solving Partial Differential Euqations with Python
+                      Solved Partial Differential Euqations with Python
                     </Typography>
                   </Typography>
                 </Grid>
@@ -583,6 +580,9 @@ const Education = ({ theme }) => {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sm={6}>
+                  <Typography style={{ fontWeight: 'bold' }}>
+                    DS related:
+                  </Typography>
                   <Typography component="ul">
                     <Typography component="li">
                       {" "}
