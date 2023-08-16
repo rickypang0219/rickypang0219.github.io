@@ -8,7 +8,7 @@ import rehypeRaw from "rehype-raw";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dark, atomDark, oneLight, oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Link } from "react-router-dom"
-
+import 'katex/dist/katex.min.css';
 
 const MdPost = ({ post }) => {
     return (

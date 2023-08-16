@@ -19,3 +19,29 @@ img {
     width: 1000px;
   }
 }
+
+
+/* @media (max-width: 767px) {
+  .katex-display {
+    font-size: 90%;
+  }
+} */
+
+/* KateX Equation Setting*/
+
+
+/* For Mac smallest screen  */
+@media (max-width: 767px) {
+  .katex {
+    font-size: 105%;
+    /* Slightly larger for screens >= 480px */
+  }
+}
+
+
+/* For Smartphone  */
+@media (max-width:450px) {
+  .katex {
+    font-size: 80%;
+  }
+}
