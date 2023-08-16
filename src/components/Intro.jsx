@@ -32,11 +32,11 @@ const Banner = () => {
       <Box
         sx={{
           // justifyContent: "left",
-          height: "350px",
-          display: { xs: "flex", md: "none" },
+          height: "340px",
+          display: { xs: "block", md: "none" },
         }}
       >
-        <Typography sx={{ fontSize: 60 }}>
+        <Typography sx={{ fontSize: 55, justifyContent: 'center' }}>
           <span style={{ fontWeight: "bold" }}>Ricky Pang</span>, <br />I am a{" "}
           <span
             style={{
@@ -44,6 +44,7 @@ const Banner = () => {
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               fontWeight: "bold",
+              // textAlign: "left",
             }}
           >
             <Typewriter
