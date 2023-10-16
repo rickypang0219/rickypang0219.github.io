@@ -166,6 +166,12 @@ function ResponsiveAppBar({ colorMode, theme }) {
                 </MenuItem>
               </Link>
 
+              <Link to="/photos" style={{ textDecoration: "none", color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#000000' }}>
+                <MenuItem key={"Photo"} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">Photo</Typography>
+                </MenuItem>
+              </Link>
+
               <Link to="/interests" style={{ textDecoration: "none", color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#000000' }}>
                 <MenuItem key={"Blog"} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">Interests</Typography>

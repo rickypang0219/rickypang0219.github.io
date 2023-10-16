@@ -13,6 +13,7 @@ import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 import { color } from 'framer-motion';
 import MdDetail from './components/MdDetail'
 import Markdown from './components/Markdown'
+import Photo from './components/Photos'
 
 
 
@@ -55,6 +56,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home theme={theme} />} />
               <Route path="/interests" element={<Interests theme={theme} />} />
+              <Route path="/photos" element={<Photo />} />
               {/* <Route path="/blog" element={<Blog theme={theme} />} />
               <Route path="/blog/:id" element={<BlogDetail />} /> */}
               <Route path="/blog" element={<Markdown theme={theme} />} />

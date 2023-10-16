@@ -21,12 +21,18 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { indigo, grey, red } from "@mui/material/colors";
 
+// card for displaying photos
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+
 // Animation
 import { useTransform, motion, useScroll } from "framer-motion";
 import { Height } from "@mui/icons-material";
 
 const Banner = () => {
-  const careers = ["Researcher", "Programmer", "AI/Web Developer"];
+  const careers = ["Researcher", "Programmer", "AI/Web Developer", "Photographer"];
   return (
     <>
       <Box
@@ -208,15 +214,16 @@ const Employment = ({ theme }) => {
                 <Grid item xs={12} sm={6}>
                   <Typography component="ul">
                     <Typography component="li">
-                      Build classification model to investigat client loss with
-                      Artifical Neural Network
+                      The First team to achieve efficient compression in specific quantum systems with a cutting-edge algorithm
                     </Typography>
                     <Typography component="li">
-                      Levergaed LSTM RNN to forecast time series
+                      Devised Auto-Encoder/CNN-like algorithm in physics to achieve essential information extraction,
                     </Typography>
                     <Typography component="li">
-
-                      Collaborated in an international research group
+                      Optimized large-scale computations with Tensor Network in Python
+                    </Typography>
+                    <Typography component="li">
+                      Collaborated in an international research group with researchers from HK, China, and the USA.
                     </Typography>
                   </Typography>
                 </Grid>
@@ -286,13 +293,10 @@ const Employment = ({ theme }) => {
                 <Grid item xs={12} sm={6}>
                   <Typography component="ul" justifyContent={'center'}>
                     <Typography component="li">
-                      <span style={{ fontWeight: "bold" }}> First team </span> to invent cutting-edge quantum states compression
+                      Analyzed 10,000+ data and developed a classification model using an Artificial Neural Network (ANN)
                     </Typography>
                     <Typography component="li">
-                      Optimized statistical models for better decision making
-                    </Typography>
-                    <Typography component="li">
-                      Reduced complexity in large-scale computations using Tensor-Network algorithm
+                      Optimized statistical models to increase accuracy for 30% improvement and better decision making
                     </Typography>
                     <Typography component="li">
                       Instructed two-semester upper-division courses and achieved a teaching rating of over 90%
@@ -610,16 +614,72 @@ const Education = ({ theme }) => {
 
 
 
+const Photos = ({ theme }) => {
+  return (
+    <>
+      <Box padding={3}>
+        <Typography sx={{ fontSize: 50, fontFamily: 'bold' }} textAlign="justify">
+          Photos 📷
+        </Typography>
+      </Box>
+
+      <Box padding={3}
+        display="flex"
+        justifyContent="center"
+        alignItems="center" >
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <Card sx={{ maxWidth: 320 }}>
+              <CardMedia
+                sx={{ height: 400 }}
+                image="images/photos/4569-20.jpg"
+                title="你的名字"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  須賀神社
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  The stair near 須賀神社 in Shijuku, Japan. This stair appears in a famous anime movie - Your Name (君の名は).
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={6}>
+            <Card sx={{ maxWidth: 320 }}>
+              <CardMedia
+                sx={{ height: 400 }}
+                image="images/photos/inari.jpg"
+                title="你的名字"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  千本鳥居，伏見稲荷大社
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  The Senbon Torii(千本鳥居) in Fushimi Inari Taisha (伏見稻荷大社), Kyoto, Japan.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Box>
+    </>
+
+  );
+}
+
+
 const Intro = ({ theme }) => {
   return (
     <>
       <Box padding={3}>
         <Banner />
         <Typography sx={{ fontSize: 20 }} textAlign="justify">
-          An aspiring physics M.Phil graduate of HKUST. Hands on experience on
-          scientific simulation, Deep learning application, and data science
-          projects. An Enthusiastic person who loves learning what I am curious.
-          Insterested in absoring knowledges and sharing ideas to everyone.
+          Data science and quantitative finance professional with expertise in computational physics,
+          statistical modeling, and machine learning. M.Phil in Physics from Hong Kong University of Science & Technology (HKUST).
+          Proven track record in analyzing data, developing predictive models, and providing strategic insights for decision-making.
+          Seeking opportunities in data science and quantitative finance to apply my skills and contribute to innovative projects.
         </Typography>
         <br />
         <i className="devicon-c-plain colored" style={{ fontSize: 70 }}></i>
@@ -642,6 +702,7 @@ const Intro = ({ theme }) => {
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" style={{ width: 70, height: 70 }} />
         <i className="devicon-vim-plain colored" style={{ fontSize: 70 }}></i>
       </Box>
+      <Photos theme={theme} />
       <Employment theme={theme} />
       <Education theme={theme} />
     </>
