@@ -8,13 +8,14 @@
   <title>Ricky Pang — Systems, data & a little bit of Rust.</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./article.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="site-wrap">
     <header class="site-header">
       <a class="wordmark" href="#" aria-label="Ricky Pang home">rp<span>_</span></a>
-      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a></nav>
+      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#blog">Blog</a></nav>
       <a class="header-contact" href="mailto:rickypang0219@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
     </header>
     <main id="main">
@@ -39,9 +40,9 @@
             <div class="spread"><span><i class="tiny-dot"></i> SPREAD</span><span id="spread">— USDT <span class="muted">/ —%</span></span></div>
             <div class="book-side bids" id="bids" role="table" aria-label="Five bid levels, highest price first"><div class="empty-book">Connecting to Binance</div></div>
             <div class="balance-labels"><span class="bid-color">Bid volume <b id="bid-share">—</b></span><span class="ask-color"><b id="ask-share">—</b> Ask volume</span></div><div class="balance-bar" aria-label="Displayed depth volume balance"><div id="bid-bar"></div></div>
-            <div class="book-footer"><span><span class="pulse-dot" id="feed-dot"></span><span id="feed-label">Starting Rust / WASM</span></span><span id="countdown">5s refresh</span></div>
+            <div class="book-footer"><span><span class="pulse-dot" id="feed-dot"></span><span id="feed-label">Starting Rust / WASM</span></span><span id="countdown">100 ms stream</span></div>
           </div>
-          <div class="market-note"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5-5 5 5 5m6-10 5 5-5 5m-2-13-2 16"/></svg><p id="market-note">Streamed via WebSocket. A fresh snapshot every 5 seconds.</p><button id="retry-button" hidden>Retry ↻</button></div>
+          <div class="market-note"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 5-5 5 5 5m6-10 5 5-5 5m-2-13-2 16"/></svg><p id="market-note">Live Binance stream · 100 ms updates, displayed as they arrive.</p><button id="retry-button" hidden>Retry ↻</button></div>
           <noscript><p class="notice">Enable JavaScript to load the Rust/WebAssembly order book.</p></noscript>
         </aside>
       </section>
@@ -57,7 +58,8 @@
         <div class="project-grid"><a class="project-card" href="https://github.com/rickypang0219/aws-backtest-pipeline" target="_blank" rel="noopener noreferrer"><div class="project-top"><span class="project-icon" aria-hidden="true">⌘</span><span class="project-kind">DATA ENGINEERING</span><span class="arrow" aria-hidden="true">↗</span></div><h3>AWS Market Data Pipeline</h3><p>From exchange archives to research-ready Parquet. Restartable backfills, memory-bounded processing, and checks before publication.</p><div class="pipeline" aria-hidden="true"><span>Exchange</span><i>→</i><span>S3</span><i>→</i><span>Glue</span><i>→</i><span>Parquet</span></div><div class="project-bottom"><span>Python · AWS · Polars</span><span>View project ↗</span></div></a>
         <a class="project-card" href="https://github.com/rickypang0219/p99_channel_latency" target="_blank" rel="noopener noreferrer"><div class="project-top"><span class="project-icon" aria-hidden="true">⌁</span><span class="project-kind">SYSTEMS ENGINEERING</span><span class="arrow" aria-hidden="true">↗</span></div><h3>Rust SPSC Latency Benchmark</h3><p>Exploring the cost of an event handoff. Atomic ring buffers, cache-line padding, and the details hiding in the latency tail.</p><div class="benchmark"><strong>~100 <span>ns</span></strong><span>P99 in one controlled Linux benchmark<br>Not production trading latency</span></div><div class="project-bottom"><span>Rust · Concurrency · Linux</span><span>View project ↗</span></div></a></div>
       </section>
-      <section class="education section-grid" aria-labelledby="education-heading"><div class="section-heading"><div class="section-number">03 — EDUCATION</div><h2 id="education-heading">A foundation <br>in first principles.</h2></div><div class="education-list"><div class="school-label">THE HONG KONG UNIVERSITY OF SCIENCE AND TECHNOLOGY</div><article><div><h3>M.Phil in Physics</h3><p>Hong Kong University of Science and Technology</p></div><span class="date">2020 — 2023</span></article><article><div><h3>B.Sc in Physics</h3><p>Second Class Honors, Division I</p></div><span class="date">2016 — 2020</span></article></div></section>
+      <section class="blog" id="blog" aria-labelledby="blog-heading"><div class="section-top"><div><div class="section-number">03 — BLOG</div><h2 id="blog-heading">Blog</h2></div></div><a class="blog-card" href="./articles/regularization-bias-variance/"><div><div class="section-number">MACHINE LEARNING · CS229</div><h3>Bias–Variance Tradeoff &amp; Regularization</h3><p>Understanding underfitting, overfitting, and the mathematics of regularization. From the bias–variance decomposition to L1 and L2 constraints.</p><div class="blog-meta">15 AUG 2023 · LEARNING NOTES</div></div><span aria-hidden="true">↗</span></a></section>
+      <section class="education section-grid" aria-labelledby="education-heading"><div class="section-heading"><div class="section-number">04 — EDUCATION</div><h2 id="education-heading">A foundation <br>in first principles.</h2></div><div class="education-list"><div class="school-label">THE HONG KONG UNIVERSITY OF SCIENCE AND TECHNOLOGY</div><article><div><h3>M.Phil in Physics</h3><p>Hong Kong University of Science and Technology</p></div><span class="date">2020 — 2023</span></article><article><div><h3>B.Sc in Physics</h3><p>Second Class Honors, Division I</p></div><span class="date">2016 — 2020</span></article></div></section>
       <section class="contact" id="contact"><div><div class="section-number">LET’S CONNECT</div><h2>Good systems start with<br>a good <span class="serif">conversation.</span></h2></div><a class="contact-link" href="mailto:rickypang0219@gmail.com">rickypang0219@gmail.com <span aria-hidden="true">↗</span></a></section>
     </main>
     <footer class="site-footer"><span>© 2026 Ricky Ka Chun Pang</span><span class="built-with"><span class="tiny-dot"></span> Built with Rust &amp; WebAssembly</span><div><a href="https://github.com/rickypang0219" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/rickykcpang" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="#">Back to top ↑</a></div></footer>
