@@ -4,8 +4,8 @@ use wasm_bindgen::{prelude::*, JsCast};
 use web_sys::{Element, Event, MessageEvent, WebSocket};
 
 // Public USDⓈ-M endpoint (Binance's 2026 public/market stream split).
-const STREAM: &str = "wss://fstream.binance.com/public/ws/btcusdt@depth5@500ms";
-const REFRESH_MS: f64 = 5_000.0;
+const STREAM: &str = "wss://fstream.binance.com/public/ws/btcusdt@depth5@100ms";
+const DEMO_REFRESH_MS: f64 = 1_000.0;
 const STALE_MS: f64 = 15_000.0;
 
 struct Socket {
@@ -29,6 +29,7 @@ struct App {
     received: f64,
     connected_at: f64,
     published: f64,
+    displayed_id: Option<u64>,
     retry_at: f64,
     attempts: u32,
     failed: bool,
@@ -128,6 +129,19 @@ fn render(book: &Snapshot) {
     attr("orderbook", "data-update-id", &book.update_id.to_string());
     attr("orderbook", "data-event-ms", &book.event_ms.to_string());
 }
+
+fn publish_latest(a: &mut App, time: f64) {
+    if a.paused {
+        return;
+    }
+    if let Some(book) = a.latest.as_ref() {
+        if a.displayed_id != Some(book.update_id) {
+            render(book);
+            a.displayed_id = Some(book.update_id);
+            a.published = time;
+        }
+    }
+}
 fn clear_book() {
     html("mid-price", "—<span class=\"price-decimal\">.——</span>");
     html(
@@ -181,6 +195,9 @@ fn connect(app: &Rc<RefCell<App>>) {
         a.latest = Some(book);
         a.received = now();
         a.attempts = 0;
+        // Live rendering follows each valid WebSocket message, not the UI timer.
+        let received = a.received;
+        publish_latest(&mut a, received);
     }) as Box<dyn FnMut(MessageEvent)>);
     let weak = Rc::downgrade(app);
     let close = Closure::wrap(Box::new(move |_: Event| {
@@ -236,15 +253,16 @@ fn tick(app: &Rc<RefCell<App>>) {
             return;
         }
     }
-    if a.demo && !a.paused && (a.published == 0.0 || time - a.published >= REFRESH_MS) {
+    if a.demo && !a.paused && (a.published == 0.0 || time - a.published >= DEMO_REFRESH_MS) {
         a.demo_step += 1;
         a.latest = Some(Snapshot::demo(a.demo_step, time));
         a.received = time;
     }
     let fresh = a.latest.is_some() && (a.demo || time - a.received < STALE_MS);
-    if !a.paused && fresh && (a.published == 0.0 || time - a.published >= REFRESH_MS) {
-        render(a.latest.as_ref().unwrap());
-        a.published = time;
+    if fresh {
+        // Also handles demo updates and the latest buffered snapshot on Resume.
+        // The update ID prevents duplicate DOM work between stream messages.
+        publish_latest(&mut a, time);
     }
     let retry = !a.demo && a.socket.is_none();
     if retry {
@@ -281,7 +299,7 @@ fn tick(app: &Rc<RefCell<App>>) {
         text("feed-label", "Binance WebSocket connected");
         text(
             "market-note",
-            "Streamed via WebSocket. A fresh snapshot every 5 seconds.",
+            "Live Binance stream · 100 ms updates, displayed as they arrive.",
         );
     } else if retry {
         state("Offline", "offline");
@@ -300,7 +318,7 @@ fn tick(app: &Rc<RefCell<App>>) {
     } else {
         state("Connecting", "");
         text("feed-label", "Waiting for fresh Binance data");
-        text("countdown", "5s refresh");
+        text("countdown", "100 ms stream");
         text(
             "market-note",
             "Connecting to Binance. Demo mode is available if the network cannot reach the feed.",
@@ -309,12 +327,11 @@ fn tick(app: &Rc<RefCell<App>>) {
     if !a.paused && fresh {
         text(
             "countdown",
-            &format!(
-                "Refresh in {}s",
-                ((REFRESH_MS - (time - a.published)) / 1000.0)
-                    .ceil()
-                    .max(0.0)
-            ),
+            if a.demo {
+                "1s demo updates"
+            } else {
+                "100 ms stream"
+            },
         );
     }
 }

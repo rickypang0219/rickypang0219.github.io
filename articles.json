@@ -1,0 +1,11 @@
+[
+  {
+    "slug": "regularization-bias-variance",
+    "title": "Bias–Variance Tradeoff & Regularization",
+    "date": "2023-08-15",
+    "category": "Machine learning",
+    "source": "Regularization-BiasVariance.md",
+    "description": "Notes from CS229: understanding underfitting, overfitting, and the mathematics of regularization.",
+    "legacy_html": true
+  }
+]
