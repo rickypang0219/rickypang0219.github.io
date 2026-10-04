@@ -16,9 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          targets: wasm32-unknown-unknown
+        run: rustup show
       - name: Install matching WASM bindings generator
         run: cargo install wasm-bindgen-cli --version 0.2.100 --locked
       - name: Test snapshot handling

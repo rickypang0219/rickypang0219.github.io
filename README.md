@@ -4,10 +4,10 @@ A charcoal personal portfolio with a Rust/WebAssembly BTCUSDT perpetual order bo
 
 ## Run
 
-Install Rust 1.88+ with [rustup](https://rustup.rs), then:
+Install [rustup](https://rustup.rs), then run the following from the project directory. `rust-toolchain.toml` pins Rust 1.99.0 and installs the WASM target for both local builds and GitHub Actions:
 
 ```sh
-rustup target add wasm32-unknown-unknown
+rustup show
 cargo install wasm-bindgen-cli --version 0.2.100 --locked
 cargo test --locked
 bash scripts/build.sh
@@ -16,14 +16,7 @@ python3 -m http.server 8080 --bind 127.0.0.1 --directory dist
 
 Open http://localhost:8080. Serve `dist/` over HTTP; opening `index.html` as a file will not load WebAssembly modules. `wasm-bindgen-cli` must match the version pinned in `Cargo.toml`.
 
-This workspace already includes a compiled `dist/` for immediate preview. The initial local build used project-local tools in the ignored `.tools/` directory because the system Rust installation does not include a WASM target. To rebuild using those existing tools on this machine:
-
-```sh
-PATH="$PWD/.tools/wasm-bindgen-0.2.100-aarch64-apple-darwin:$PATH" \
-CARGO_HOME="$PWD/.tools/cargo-home" \
-CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUSTFLAGS="--sysroot=$PWD/.tools/sysroot" \
-bash scripts/build.sh
-```
+Builds use the official toolchain in `~/.rustup` and Cargo tools/cache in `~/.cargo`; no project-local `.tools/` directory or custom sysroot is required. Remove any old `.tools` PATH entries, `CARGO_HOME` override, or `CARGO_TARGET_WASM32_UNKNOWN_UNKNOWN_RUSTFLAGS` custom sysroot from your shell before building. `Cargo.toml` declares library dependencies and the minimum supported Rust version; `rust-toolchain.toml` selects the compiler used by this project. When upgrading Rust, update that file and verify the tests and full site build. When upgrading `wasm-bindgen`, keep the crate and CLI versions in sync.
 
 ## Behavior
 
